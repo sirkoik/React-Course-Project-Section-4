@@ -57,13 +57,13 @@ class App extends Component {
     let outputCharsHtml = null;
     console.log(this.state.outputChars);
 
-    if (this.state.textLength >= this.minLength) {
+    //if (this.state.textLength >= this.minLength) {
       outputCharsHtml = this.state.outputChars.map((character, index) => {
         return <CharComponent key={character.key} onClick={(event) => {this.characterClickHandler(event, character.key)}}>{character.character}</CharComponent>;
       });
       
       outputCharsHtml = <div>{outputCharsHtml}</div>;
-    }
+    //}
 
     return (
       <div className="App">
