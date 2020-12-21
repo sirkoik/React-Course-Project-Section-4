@@ -1,0 +1,11 @@
+.characterBlock {
+    display: inline-block; 
+    padding: 16px; 
+    text-align: center;
+    margin: 16px;
+    border: 1px solid black;
+
+    background: tan;
+    box-shadow: 2px 2px #ddd;
+    cursor: pointer;
+}
