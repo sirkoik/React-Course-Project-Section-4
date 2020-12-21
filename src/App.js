@@ -6,6 +6,7 @@ import CharComponent from './CharComponent/CharComponent';
 
 class App extends Component {
   minLength = 5;
+  keyCounter = -1;
 
   state = {
     outputText: '',
@@ -18,8 +19,11 @@ class App extends Component {
     const charsAsArray = event.target.value.split('');
 
     const outputChars = charsAsArray.map((character, index) => {
+      this.keyCounter++;
+
       return {
-        key: "charKey" + new Date().getTime() + '' + Math.floor(Math.random() * 1e6),
+        // key: "charKey" + new Date().getTime() + '' + Math.floor(Math.random() * 1e6),
+        key: this.keyCounter,
         character: character
       };
     });
